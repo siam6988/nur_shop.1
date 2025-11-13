@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যোগাযোগ - Nur</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Nur</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">হোম</a>
+                <a href="shop.html" class="nav-link">শপ</a>
+                <a href="orders.html" class="nav-link">অর্ডার</a>
+                <a href="contact.html" class="nav-link active">যোগাযোগ</a>
+                <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-hero">
+            <h1>যোগাযোগ করুন</h1>
+            <p>আমরা আপনার প্রশ্ন এবং মতামত শুনতে চাই</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>আমাদের সাথে যোগাযোগ করুন</h2>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>ফোন</h3>
+                            <p>+৮৮০ ১৬৩৪-৫৬৭৮৯০</p>
+                            <p>+৮৮০ ১৯৮৭-৬৫৪৩২১</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>ইমেইল</h3>
+                            <p>support@nur.com</p>
+                            <p>info@nur.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>ঠিকানা</h3>
+                            <p>নুর টাওয়ার, ১২/ক</p>
+                            <p>ধানমন্ডি, ঢাকা-১২০৯</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>কাজের সময়</h3>
+                            <p>শনি-বৃহস্পতি: সকাল ৯টা - রাত ১১টা</p>
+                            <p>শুক্রবার: বন্ধ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>মেসেজ পাঠান</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">আপনার নাম *</label>
+                        <input type="text" id="contactName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">ইমেইল *</label>
+                        <input type="email" id="contactEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactPhone">মোবাইল নম্বর</label>
+                        <input type="tel" id="contactPhone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">বিষয় *</label>
+                        <select id="contactSubject" required>
+                            <option value="">বিষয় নির্বাচন করুন</option>
+                            <option value="order">অর্ডার সম্পর্কিত</option>
+                            <option value="product">প্রোডাক্ট সম্পর্কিত</option>
+                            <option value="delivery">ডেলিভারি সম্পর্কিত</option>
+                            <option value="return">রিটার্ন সম্পর্কিত</option>
+                            <option value="other">অন্যান্য</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">মেসেজ *</label>
+                        <textarea id="contactMessage" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> মেসেজ পাঠান
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>সচরাচর জিজ্ঞাসা</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>অর্ডার ক্যানসেল কিভাবে করব?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>আপনি "আমার অর্ডার" সেকশন থেকে যেকোনো পেন্ডিং অর্ডার ক্যানসেল করতে পারবেন। ডেলিভারি শুরু হয়ে গেলে অর্ডার ক্যানসেল করা যাবে না।</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>রিটার্ন পলিসি কি?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>আপনি পণ্য গ্রহণের ৭ দিনের মধ্যে রিটার্ন করতে পারবেন। পণ্য অপরিবর্তিত অবস্থায় এবং মূল প্যাকেজিং এ থাকতে হবে।</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>ডেলিভারি চার্জ কত?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>সাধারণ ডেলিভারি চার্জ ৳১২০। ৫,০০০ টাকার以上的 অর্ডারে ফ্রি ডেলিভারি সুবিধা পাবেন।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nur</h3>
+                    <p>বাংলাদেশের সেরা অনলাইন শপিং প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংক</h4>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>
