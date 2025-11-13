@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শপ - Nur</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Nur</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">হোম</a>
+                <a href="shop.html" class="nav-link active">শপ</a>
+                <a href="orders.html" class="nav-link">অর্ডার</a>
+                <a href="contact.html" class="nav-link">যোগাযোগ</a>
+                <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                <div class="nav-cart">
+                    <a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> কার্ট <span class="cart-count">0</span></a>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="shop-container">
+        <div class="shop-header">
+            <h1>সব প্রোডাক্ট</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="প্রোডাক্ট খুঁজুন...">
+                <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <div class="shop-content">
+            <!-- Filters Sidebar -->
+            <div class="filters-sidebar">
+                <div class="filter-group">
+                    <h3>ক্যাটেগরি</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" value="ফ্যাশন"> ফ্যাশন</label>
+                        <label><input type="checkbox" value="ইলেকট্রনিক্স"> ইলেকট্রনিক্স</label>
+                        <label><input type="checkbox" value="হোম"> হোম</label>
+                        <label><input type="checkbox" value="কিচেন"> কিচেন</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>দাম রেঞ্জ</h3>
+                    <div class="price-range">
+                        <input type="range" id="priceRange" min="0" max="50000" value="50000">
+                        <div class="price-labels">
+                            <span>০</span>
+                            <span id="maxPrice">৫০,০০০</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>সাইজ</h3>
+                    <div class="size-options">
+                        <button class="size-btn" data-size="S">S</button>
+                        <button class="size-btn" data-size="M">M</button>
+                        <button class="size-btn" data-size="L">L</button>
+                        <button class="size-btn" data-size="XL">XL</button>
+                        <button class="size-btn" data-size="FREE SIZE">FREE</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="applyFilters">ফিল্টার প্রয়োগ করুন</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-section">
+                <div class="products-header">
+                    <p id="productsCount">মোট ১২টি প্রোডাক্ট</p>
+                    <select id="sortSelect">
+                        <option value="default">ডিফল্ট</option>
+                        <option value="price-low">দাম: কম থেকে বেশি</option>
+                        <option value="price-high">দাম: বেশি থেকে কম</option>
+                        <option value="name">নাম অনুসারে</option>
+                    </select>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products loaded by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nur</h3>
+                    <p>বাংলাদেশের সেরা অনলাইন শপিং প্ল্যাটফর্ম</p>
+                </div>
+                <div class="footer-section">
+                    <h4>লিংক</h4>
+                    <a href="about.html">আমাদের সম্পর্কে</a>
+                    <a href="contact.html">যোগাযোগ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/shop.js"></script>
+</body>
+</html>
