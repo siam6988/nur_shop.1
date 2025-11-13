@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সেটিংস - Nur</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Nur</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">হোম</a>
+                <a href="shop.html" class="nav-link">শপ</a>
+                <a href="orders.html" class="nav-link">অর্ডার</a>
+                <a href="settings.html" class="nav-link active">সেটিংস</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="settings-container">
+        <h1>সেটিংস</h1>
+        
+        <div class="settings-content">
+            <!-- Language Settings -->
+            <div class="settings-card">
+                <h2><i class="fas fa-language"></i> ভাষা সেটিংস</h2>
+                <div class="language-settings">
+                    <div class="language-option">
+                        <label class="language-selector">
+                            <input type="radio" name="language" value="bn" checked>
+                            <span class="language-content">
+                                <span class="flag">🇧🇩</span>
+                                <span class="language-name">বাংলা</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="language-option">
+                        <label class="language-selector">
+                            <input type="radio" name="language" value="en">
+                            <span class="language-content">
+                                <span class="flag">🇺🇸</span>
+                                <span class="language-name">English</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification Settings -->
+            <div class="settings-card">
+                <h2><i class="fas fa-bell"></i> নোটিফিকেশন সেটিংস</h2>
+                <div class="notification-settings">
+                    <div class="notification-option">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                            <span class="notification-text">ইমেইল নোটিফিকেশন</span>
+                        </label>
+                    </div>
+                    <div class="notification-option">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                            <span class="notification-text">এসএমএস নোটিফিকেশন</span>
+                        </label>
+                    </div>
+                    <div class="notification-option">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                            <span class="notification-text">প্রোমোশনাল মেসেজ</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Settings -->
+            <div class="settings-card">
+                <h2><i class="fas fa-user-cog"></i> অ্যাকাউন্ট সেটিংস</h2>
+                <div class="account-settings">
+                    <div class="form-group">
+                        <label for="userName">পুরো নাম</label>
+                        <input type="text" id="userName" value="রহিম আহমেদ">
+                    </div>
+                    <div class="form-group">
+                        <label for="userEmail">ইমেইল</label>
+                        <input type="email" id="userEmail" value="rahim@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="userPhone">মোবাইল নম্বর</label>
+                        <input type="tel" id="userPhone" value="০১৭১২৩৪৫৬৭৮">
+                    </div>
+                    <button class="btn btn-primary">আপডেট করুন</button>
+                </div>
+            </div>
+
+            <!-- Privacy Settings -->
+            <div class="settings-card">
+                <h2><i class="fas fa-shield-alt"></i> প্রাইভেসি সেটিংস</h2>
+                <div class="privacy-settings">
+                    <div class="privacy-option">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                            <span class="privacy-text">ডেটা সংগ্রহ অনুমতি</span>
+                        </label>
+                    </div>
+                    <div class="privacy-option">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                            <span class="privacy-text">থার্ড-পার্টি শেয়ারিং</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="settings-card danger-zone">
+                <h2><i class="fas fa-exclamation-triangle"></i> ডেঞ্জার জোন</h2>
+                <div class="danger-actions">
+                    <button class="btn btn-danger">
+                        <i class="fas fa-trash"></i> অ্যাকাউন্ট ডিলিট করুন
+                    </button>
+                    <button class="btn btn-warning">
+                        <i class="fas fa-sign-out-alt"></i> লগআউট
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nur</h3>
+                    <p>বাংলাদেশের সেরা অনলাইন শপিং প্ল্যাটফর্ম</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/settings.js"></script>
+</body>
+</html>
