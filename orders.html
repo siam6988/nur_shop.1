@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমার অর্ডার - Nur</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Nur</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">হোম</a>
+                <a href="shop.html" class="nav-link">শপ</a>
+                <a href="orders.html" class="nav-link active">অর্ডার</a>
+                <a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> কার্ট <span class="cart-count">0</span></a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="orders-container">
+        <h1>আমার অর্ডার</h1>
+        
+        <!-- Order Search -->
+        <div class="order-search">
+            <div class="search-box">
+                <input type="text" id="orderSearch" placeholder="অর্ডার নম্বর বা ফোন নম্বর দিয়ে খুঁজুন...">
+                <button class="btn btn-primary" id="searchOrderBtn">
+                    <i class="fas fa-search"></i> খুঁজুন
+                </button>
+            </div>
+        </div>
+
+        <!-- Orders List -->
+        <div class="orders-list">
+            <div class="order-empty" id="emptyOrders">
+                <i class="fas fa-box-open"></i>
+                <h2>কোন অর্ডার নেই</h2>
+                <p>আপনার কোন অর্ডার ইতিহাস পাওয়া যায়নি</p>
+                <a href="shop.html" class="btn btn-primary">শপিং করুন</a>
+            </div>
+
+            <div class="orders-items" id="ordersList">
+                <!-- Orders loaded by JavaScript -->
+                <div class="order-item">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <h3>অর্ডার #NUR-20241215-001</h3>
+                            <span class="order-date">১৫ ডিসেম্বর, ২০২৪</span>
+                        </div>
+                        <div class="order-status delivered">
+                            <i class="fas fa-check-circle"></i>
+                            ডেলিভার্ড
+                        </div>
+                    </div>
+
+                    <div class="order-products">
+                        <div class="order-product">
+                            <img src="assets/img/products/product1.jpg" alt="Product">
+                            <div class="product-details">
+                                <h4>মেনস কটন শার্ট</h4>
+                                <p>সাইজ: M, পরিমাণ: 1</p>
+                                <span class="product-price">৳ ১,০৮০</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <strong>মোট: ৳ ১,২০০</strong>
+                            <small>(ডেলিভারি চার্জ: ৳১২০ সহ)</small>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn-primary btn-small">
+                                <i class="fas fa-eye"></i> বিস্তারিত
+                            </button>
+                            <button class="btn btn-secondary btn-small">
+                                <i class="fas fa-redo"></i> আবার অর্ডার করুন
+                            </button>
+                            <button class="btn btn-success btn-small">
+                                <i class="fas fa-star"></i> রিভিউ দিন
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-item">
+                    <div class="order-header">
+                        <div class="order-info">
+                            <h3>অর্ডার #NUR-20241214-002</h3>
+                            <span class="order-date">১৪ ডিসেম্বর, ২০২৪</span>
+                        </div>
+                        <div class="order-status pending">
+                            <i class="fas fa-clock"></i>
+                            পেন্ডিং
+                        </div>
+                    </div>
+
+                    <div class="order-products">
+                        <div class="order-product">
+                            <img src="assets/img/products/product2.jpg" alt="Product">
+                            <div class="product-details">
+                                <h4>স্মার্টফোন</h4>
+                                <p>সাইজ: FREE SIZE, পরিমাণ: 1</p>
+                                <span class="product-price">৳ ২১,২৫০</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <strong>মোট: ৳ ২১,৩৭০</strong>
+                            <small>(ডেলিভারি চার্জ: ৳১২০ সহ)</small>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn btn-primary btn-small">
+                                <i class="fas fa-eye"></i> বিস্তারিত
+                            </button>
+                            <button class="btn btn-secondary btn-small">
+                                <i class="fas fa-times"></i> বাতিল করুন
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nur</h3>
+                    <p>বাংলাদেশের সেরা অনলাইন শপিং প্ল্যাটফর্ম</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/orders.js"></script>
+</body>
+</html>
