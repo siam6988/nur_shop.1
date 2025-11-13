@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রোডাক্ট ডিটেইলস - Nur</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Nur</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">হোম</a>
+                <a href="shop.html" class="nav-link">শপ</a>
+                <a href="orders.html" class="nav-link">অর্ডার</a>
+                <a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> কার্ট <span class="cart-count">0</span></a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-detail-container">
+        <div class="product-detail">
+            <!-- Product Images -->
+            <div class="product-images">
+                <div class="main-image">
+                    <img id="mainImage" src="assets/img/products/product1.jpg" alt="প্রোডাক্ট ইমেজ">
+                </div>
+                <div class="image-thumbnails">
+                    <img src="assets/img/products/product1.jpg" alt="Thumbnail 1" class="thumbnail active">
+                    <img src="assets/img/products/product2.jpg" alt="Thumbnail 2" class="thumbnail">
+                    <img src="assets/img/products/product3.jpg" alt="Thumbnail 3" class="thumbnail">
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h1 id="productTitle">মেনস কটন শার্ট</h1>
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>(৪.৫/৫) - ১২টি রিভিউ</span>
+                </div>
+
+                <div class="price-section">
+                    <span class="current-price">৳ ১,০৮০</span>
+                    <span class="original-price">৳ ১,২০০</span>
+                    <span class="discount">১০% ছাড়</span>
+                </div>
+
+                <div class="product-meta">
+                    <p><strong>ব্র্যান্ড:</strong> ফ্যাশন হাব</p>
+                    <p><strong>ক্যাটেগরি:</strong> ফ্যাশন</p>
+                    <p class="stock-status in-stock"><i class="fas fa-check"></i> স্টকে আছে</p>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="size-selection">
+                    <h3>সাইজ নির্বাচন করুন:</h3>
+                    <div class="size-options">
+                        <button class="size-btn" data-size="S">S</button>
+                        <button class="size-btn active" data-size="M">M</button>
+                        <button class="size-btn" data-size="L">L</button>
+                        <button class="size-btn" data-size="XL">XL</button>
+                    </div>
+                </div>
+
+                <!-- Quantity -->
+                <div class="quantity-selection">
+                    <h3>পরিমাণ:</h3>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" id="decreaseQty">-</button>
+                        <span id="quantity">1</span>
+                        <button class="quantity-btn" id="increaseQty">+</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-primary btn-large" id="addToCartBtn">
+                        <i class="fas fa-shopping-cart"></i> কার্টে যোগ করুন
+                    </button>
+                    <button class="btn btn-secondary btn-large">
+                        <i class="fas fa-heart"></i> উইশলিস্ট
+                    </button>
+                </div>
+
+                <!-- Delivery Info -->
+                <div class="delivery-info">
+                    <p><i class="fas fa-truck"></i> ডেলিভারি চার্জ: ৳১২০</p>
+                    <p><i class="fas fa-clock"></i> ডেলিভারি সময়: ২-৩ কার্যদিবস</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Description & Reviews -->
+        <div class="product-tabs">
+            <div class="tab-headers">
+                <button class="tab-header active" data-tab="description">বর্ণনা</button>
+                <button class="tab-header" data-tab="specifications">স্পেসিফিকেশন</button>
+                <button class="tab-header" data-tab="reviews">রিভিউ (১২)</button>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="description">
+                    <h3>প্রোডাক্ট বর্ণনা</h3>
+                    <p>এই মেনস কটন শার্ট উচ্চমানের সুতি কাপড় দিয়ে তৈরি। আরামদায়ক এবং শ্বাস-প্রশ্বাসের উপযোগী ডিজাইন। অফিস এবং ক্যাজুয়াল ওয়্যার উভয় ক্ষেত্রেই পরিধানযোগ্য।</p>
+                </div>
+
+                <div class="tab-pane" id="specifications">
+                    <h3>স্পেসিফিকেশন</h3>
+                    <table class="specs-table">
+                        <tr>
+                            <td>ফেব্রিক</td>
+                            <td>১০০% সুতি</td>
+                        </tr>
+                        <tr>
+                            <td>কেয়ার</td>
+                            <td>মেশিন ওয়াশেবল</td>
+                        </tr>
+                        <tr>
+                            <td>কলার</td>
+                            <td>নেভি ব্লু</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-pane" id="reviews">
+                    <h3>গ্রাহক রিভিউ</h3>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer">রহিম আহমেদ</div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>খুবই ভালো কোয়ালিটির শার্ট। সাইজ পারফেক্ট fits.</p>
+                            <span class="review-date">১২ ডিসেম্বর, ২০২৪</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nur</h3>
+                    <p>বাংলাদেশের সেরা অনলাইন শপিং প্ল্যাটফর্ম</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/product.js"></script>
+</body>
+</html>
