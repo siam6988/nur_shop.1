@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কার্ট - Nur</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Nur</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">হোম</a>
+                <a href="shop.html" class="nav-link">শপ</a>
+                <a href="orders.html" class="nav-link">অর্ডার</a>
+                <a href="cart.html" class="nav-link active"><i class="fas fa-shopping-cart"></i> কার্ট <span class="cart-count">0</span></a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cart-container">
+        <h1>আপনার শপিং কার্ট</h1>
+        
+        <div class="cart-content">
+            <div class="cart-items">
+                <div class="cart-empty" id="emptyCart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h2>আপনার কার্ট খালি</h2>
+                    <p>কিছু প্রোডাক্ট যোগ করুন কার্টে</p>
+                    <a href="shop.html" class="btn btn-primary">শপিং করুন</a>
+                </div>
+
+                <div class="cart-items-list" id="cartItems">
+                    <!-- Cart items loaded by JavaScript -->
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h3>অর্ডার সারাংশ</h3>
+                <div class="summary-item">
+                    <span>সাবটোটাল:</span>
+                    <span id="subtotal">৳ ০</span>
+                </div>
+                <div class="summary-item">
+                    <span>ডেলিভারি চার্জ:</span>
+                    <span id="deliveryCharge">৳ ১২০</span>
+                </div>
+                <div class="summary-item">
+                    <span>ডিসকাউন্ট:</span>
+                    <span id="discount">-৳ ০</span>
+                </div>
+                <div class="summary-item total">
+                    <span>মোট:</span>
+                    <span id="totalAmount">৳ ১২০</span>
+                </div>
+                <button class="btn btn-primary btn-large" id="checkoutBtn" disabled>
+                    চেকআউট করুন
+                </button>
+                <a href="shop.html" class="continue-shopping">
+                    <i class="fas fa-arrow-left"></i> শপিং চালিয়ে যান
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nur</h3>
+                    <p>বাংলাদেশের সেরা অনলাইন শপিং প্ল্যাটফর্ম</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+</html>
