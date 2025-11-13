@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>চেকআউট - Nur</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Nur</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">হোম</a>
+                <a href="shop.html" class="nav-link">শপ</a>
+                <a href="orders.html" class="nav-link">অর্ডার</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="checkout-container">
+        <h1>চেকআউট</h1>
+        
+        <div class="checkout-content">
+            <!-- Customer Information -->
+            <div class="checkout-form">
+                <h2>গ্রাহক তথ্য</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="customerName">পুরো নাম *</label>
+                        <input type="text" id="customerName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone">মোবাইল নম্বর *</label>
+                        <input type="tel" id="customerPhone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail">ইমেইল</label>
+                        <input type="email" id="customerEmail">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerAddress">ঠিকানা *</label>
+                        <textarea id="customerAddress" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerCity">শহর *</label>
+                        <input type="text" id="customerCity" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerArea">এলাকা *</label>
+                            <input type="text" id="customerArea" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerZip">জিপ কোড</label>
+                            <input type="text" id="customerZip">
+                        </div>
+                    </div>
+
+                    <h2>পেমেন্ট মেথড</h2>
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="paymentMethod" value="cod" checked>
+                            <div class="payment-content">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <div>
+                                    <strong>ক্যাশ অন ডেলিভারি (COD)</strong>
+                                    <p>পণ্য হাতে পেয়ে টাকা প্রদান করুন</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large" id="placeOrderBtn">
+                        অর্ডার কনফার্ম করুন
+                    </button>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>আপনার অর্ডার</h2>
+                <div class="summary-items" id="checkoutItems">
+                    <!-- Order items loaded by JavaScript -->
+                </div>
+                
+                <div class="summary-totals">
+                    <div class="summary-item">
+                        <span>সাবটোটাল:</span>
+                        <span id="checkoutSubtotal">৳ ০</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>ডেলিভারি চার্জ:</span>
+                        <span id="checkoutDelivery">৳ ১২০</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>ডিসকাউন্ট:</span>
+                        <span id="checkoutDiscount">-৳ ০</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>মোট:</span>
+                        <span id="checkoutTotal">৳ ১২০</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>অর্ডার সফল!</h2>
+            <p id="orderNumber">আপনার অর্ডার নম্বর: <strong>NUR-20241215-001</strong></p>
+            <p>আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব</p>
+            <div class="modal-actions">
+                <a href="orders.html" class="btn btn-primary">আমার অর্ডার দেখুন</a>
+                <a href="index.html" class="btn btn-secondary">হোমপেজে যান</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nur</h3>
+                    <p>বাংলাদেশের সেরা অনলাইন শপিং প্ল্যাটফর্ম</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/checkout.js"></script>
+</body>
+</html>
