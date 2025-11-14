@@ -142,4 +142,75 @@ class OrdersPage {
                 emptyOrders.style.display = 'block';
                 emptyOrders.innerHTML = `
                     <i class="fas fa-search"></i>
-                    <h2>কোন অর্ডার পাওয়া যায়নি</h
+                    <h2>কোন অর্ডার পাওয়া যায়নি</h2>
+                    <p>আপনার সার্চের সাথে মিলছে না</p>
+                `;
+            }
+            return;
+        }
+
+        if (emptyOrders) emptyOrders.style.display = 'none';
+        if (container) container.style.display = 'block';
+
+        // Similar to displayOrders but with filteredOrders
+        container.innerHTML = filteredOrders.map(order => `
+            <div class="order-item">
+                <div class="order-header">
+                    <div class="order-info">
+                        <h3>অর্ডার #${order.id}</h3>
+                        <span class="order-date">${this.formatDate(order.createdAt)}</span>
+                    </div>
+                    <div class="order-status ${order.status}">
+                        <i class="fas ${this.getStatusIcon(order.status)}"></i>
+                        ${this.getStatusText(order.status)}
+                    </div>
+                </div>
+                <div class="order-products">
+                    ${order.items.map(item => `
+                        <div class="order-product">
+                            <img src="${item.image}" alt="${item.name}">
+                            <div class="product-details">
+                                <h4>${item.name}</h4>
+                                <p>সাইজ: ${item.size}, পরিমাণ: ${item.quantity}</p>
+                                <span class="product-price">৳ ${item.price * item.quantity}</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `).join('');
+    }
+
+    setupFAQ() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    }
+
+    viewOrderDetails(orderId) {
+        // In a real app, this would show a detailed order view
+        nurApp.showToast(`অর্ডার #${orderId} এর বিস্তারিত দেখানো হচ্ছে`);
+    }
+
+    leaveReview(orderId) {
+        // In a real app, this would open a review modal
+        nurApp.showToast(`অর্ডার #${orderId} এর জন্য রিভিউ দিন`);
+    }
+
+    cancelOrder(orderId) {
+        if (confirm('আপনি কি এই অর্ডার বাতিল করতে চান?')) {
+            this.orders = this.orders.filter(order => order.id !== orderId);
+            localStorage.setItem('nur_orders', JSON.stringify(this.orders));
+            this.displayOrders();
+            nurApp.showToast('অর্ডার বাতিল করা হয়েছে');
+        }
+    }
+}
+
+// Initialize orders page
+const ordersPage = new OrdersPage();
